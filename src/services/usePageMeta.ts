@@ -1,10 +1,5 @@
 import { onMounted } from 'vue'
 
-interface PageMetaOptions {
-  title: string
-  description?: string
-}
-
 export function usePageMeta(options: PageMetaOptions) {
   onMounted(() => {
     if (options.title) {

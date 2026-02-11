@@ -26,3 +26,8 @@ interface RegistrationPayload {
     parent: RegistrationParent
     program: RegistrationProgram
 }
+
+interface PageMetaOptions {
+    title: string
+    description?: string
+}
