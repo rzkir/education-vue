@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { RouterLink } from 'vue-router'
+import { useStateTentangKami } from '../services/useStateTentangKami'
+import { usePageMeta } from '../services/usePageMeta'
+
+// @ts-ignore
+const { statsSection, awardsCount, graduationCount, clubsCount, partnersCount } = useStateTentangKami()
+
+usePageMeta({
+    title: 'Tentang Kami - Nusantara Global Academy',
+    description:
+        'Mengenal lebih dekat Nusantara Global Academy, sekolah berstandar internasional yang berfokus pada karakter, keunggulan akademik, dan kesiapan global.'
+})
 </script>
 
 <template>
@@ -11,7 +23,7 @@ import Footer from '../components/Footer.vue'
             <!-- Hero Section -->
             <section class="relative pb-10 md:pb-28 py-36 overflow-hidden">
                 <div class="absolute top-0 right-0 -z-10 w-1/3 h-full bg-blue-50/50 rounded-bl-[200px]"></div>
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div class="max-w-3xl">
                         <h4 class="text-blue-600 font-bold tracking-widest uppercase text-xs md:text-sm mb-4">
                             Mengenal Lebih Dekat
@@ -98,7 +110,7 @@ import Footer from '../components/Footer.vue'
 
             <!-- Mission & Vision -->
             <section class="py-10 bg-white">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div class="grid lg:grid-cols-2 gap-12">
                         <div class="p-10 bg-blue-600 rounded-3xl text-white shadow-xl shadow-blue-200">
                             <iconify-icon icon="lucide:eye" class="text-4xl mb-6 opacity-80"></iconify-icon>
@@ -175,7 +187,7 @@ import Footer from '../components/Footer.vue'
 
             <!-- Leadership -->
             <section class="py-10 bg-slate-50">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                             Kepemimpinan Sekolah
@@ -239,32 +251,32 @@ import Footer from '../components/Footer.vue'
             </section>
 
             <!-- Achievements & Stats -->
-            <section class="py-10 md:py-20 bg-blue-600 relative overflow-hidden">
+            <section ref="statsSection" class="py-10 md:py-20 bg-blue-600 relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-full opacity-10">
                     <iconify-icon icon="lucide:trophy" class="text-[40rem] -top-20 -left-40 absolute"></iconify-icon>
                 </div>
-                <div class="container mx-auto px-4 relative z-10 text-white">
+                <div class="container mx-auto px-4 md:px-8 relative z-10 text-white">
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                         <div>
-                            <div class="text-4xl md:text-5xl font-bold mb-2">150+</div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">{{ awardsCount }}+</div>
                             <div class="text-blue-100 text-xs md:text-sm uppercase tracking-widest">
                                 Penghargaan Nasional
                             </div>
                         </div>
                         <div>
-                            <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">{{ graduationCount }}%</div>
                             <div class="text-blue-100 text-xs md:text-sm uppercase tracking-widest">
                                 Kelulusan PTN/Luar Negeri
                             </div>
                         </div>
                         <div>
-                            <div class="text-4xl md:text-5xl font-bold mb-2">45</div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">{{ clubsCount }}</div>
                             <div class="text-blue-100 text-xs md:text-sm uppercase tracking-widest">
                                 Ekskul &amp; Klub Aktif
                             </div>
                         </div>
                         <div>
-                            <div class="text-4xl md:text-5xl font-bold mb-2">20+</div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">{{ partnersCount }}+</div>
                             <div class="text-blue-100 text-xs md:text-sm uppercase tracking-widest">
                                 Mitra Universitas Dunia
                             </div>
@@ -275,7 +287,7 @@ import Footer from '../components/Footer.vue'
 
             <!-- Why Choose Us -->
             <section class="py-10 md:py-20 bg-white">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div class="grid lg:grid-cols-2 gap-16">
                         <div>
                             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
@@ -339,11 +351,11 @@ import Footer from '../components/Footer.vue'
                                 mengintegrasikan Seni dan Soft Skills untuk menciptakan individu
                                 yang kreatif dan mampu memecahkan masalah nyata.
                             </p>
-                            <a id="cta-discover" href="/program"
+                            <RouterLink id="cta-discover" to="/program"
                                 class="inline-flex items-center gap-2 text-white font-bold hover:gap-4 transition-all">
                                 Lihat Program Kami
                                 <iconify-icon icon="lucide:arrow-right"></iconify-icon>
-                            </a>
+                            </RouterLink>
                         </div>
                     </div>
                 </div>
@@ -351,7 +363,7 @@ import Footer from '../components/Footer.vue'
 
             <!-- Testimonials -->
             <section class="py-10 md:py-20 bg-slate-50">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight text-slate-900">
                             Suara Mereka
@@ -415,7 +427,7 @@ import Footer from '../components/Footer.vue'
 
             <!-- CTA Section -->
             <section class="py-10">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4 md:px-8">
                     <div
                         class="bg-blue-600 rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-8 opacity-20">
@@ -429,12 +441,11 @@ import Footer from '../components/Footer.vue'
                             tempat putra-putri Anda di sekolah terbaik.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a id="cta-register"
-                                href="https://p.superdesign.dev/draft/d4531f37-751d-49f4-a9b5-6b4d2c804a58"
+                            <a id="cta-register" href="/registration"
                                 class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all">
                                 Daftar Sekarang
                             </a>
-                            <a id="cta-tour" href="https://p.superdesign.dev/draft/58db06bd-7af7-4ec6-be12-8b005183b3e3"
+                            <a id="cta-tour" href="/fasilitas"
                                 class="bg-blue-700 text-white border border-blue-500 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition-all">
                                 Campus Tour Virtual
                             </a>

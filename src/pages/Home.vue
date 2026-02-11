@@ -2,6 +2,13 @@
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import { RouterLink } from 'vue-router'
+import { usePageMeta } from '../services/usePageMeta'
+
+usePageMeta({
+  title: 'Nusantara Global Academy - Sekolah Berstandar Internasional',
+  description:
+    'Nusantara Global Academy membentuk pemimpin masa depan dengan kurikulum berbasis karakter, teknologi, dan nilai-nilai luhur bangsa.'
+})
 </script>
 
 <template>
@@ -10,7 +17,7 @@ import { RouterLink } from 'vue-router'
 
     <main style="view-transition-name: main-content">
       <!-- Hero Section -->
-      <section class="pb-16 md:pb-28 py-28 px-4 overflow-hidden">
+      <section class="pb-16 md:pb-28 py-28 px-4 md:px-8 overflow-hidden">
         <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-8">
             <div
@@ -78,7 +85,7 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <!-- About Section -->
-      <section id="tentang" class="bg-slate-50 px-4">
+      <section id="tentang" class="bg-slate-50 px-4 md:px-8">
         <div class="container mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
@@ -153,7 +160,7 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <!-- PPDB Banner Section -->
-      <section id="ppdb" class="pt-10 md:pt-24 px-4 bg-white">
+      <section id="ppdb" class="pt-10 md:pt-24 px-4 md:px-8 bg-white">
         <div class="container mx-auto">
           <div
             class="relative overflow-hidden bg-linear-to-br from-indigo-700 via-blue-800 to-purple-800 rounded-[2.5rem] p-8 md:p-16 shadow-2xl">
@@ -236,7 +243,7 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <!-- Programs Section -->
-      <section id="program" class="py-16 md:py-24 px-4">
+      <section id="program" class="py-16 md:py-24 px-4 md:px-8">
         <div class="container mx-auto">
           <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <h2 class="text-blue-800 font-bold tracking-wider uppercase text-sm mb-4">
@@ -309,7 +316,7 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <!-- Facilities Section -->
-      <section id="fasilitas" class="py-16 md:py-24 bg-slate-900 text-white overflow-hidden px-4">
+      <section id="fasilitas" class="py-16 md:py-24 bg-slate-900 text-white overflow-hidden px-4 md:px-8">
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div class="max-w-xl">

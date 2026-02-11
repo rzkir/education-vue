@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { usePageMeta } from '../services/usePageMeta'
+
+usePageMeta({
+  title: 'Program Sains & Teknologi - Nusantara Global Academy',
+  description:
+    'Program Sains & Teknologi Nusantara Global Academy menggabungkan kurikulum STEM, riset ilmiah, robotika, dan ilmu komputer untuk menyiapkan siswa menghadapi masa depan teknologi.'
+})
 </script>
 
 <template>
@@ -9,13 +16,10 @@ import Footer from '../components/Footer.vue'
 
     <main style="view-transition-name: main-content">
       <!-- Breadcrumb -->
-      <section class="pt-32 pb-6 px-4">
-        <div class="max-w-7xl mx-auto">
+      <section class="pt-28 md:pt-32 pb-6 px-4 md:px-8">
+        <div class="container mx-auto">
           <div class="flex items-center gap-2 text-sm text-slate-400">
-            <RouterLink
-              to="/"
-              class="hover:text-blue-800 transition-colors"
-            >
+            <RouterLink to="/" class="hover:text-blue-800 transition-colors">
               Beranda
             </RouterLink>
             <iconify-icon icon="lucide:chevron-right" class="text-xs"></iconify-icon>
@@ -31,13 +35,12 @@ import Footer from '../components/Footer.vue'
       </section>
 
       <!-- Program Hero -->
-      <section class="pb-12 px-4">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section class="pb-12 px-4 md:px-8">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <div>
               <span
-                class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 inline-block"
-              >
+                class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 inline-block">
                 Science &amp; Tech Division
               </span>
               <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
@@ -54,9 +57,7 @@ import Footer from '../components/Footer.vue'
 
             <div class="flex flex-wrap gap-8 py-4 border-y border-slate-100">
               <div class="flex items-center gap-3">
-                <div
-                  class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800"
-                >
+                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800">
                   <iconify-icon icon="lucide:layers" class="text-2xl"></iconify-icon>
                 </div>
                 <div>
@@ -70,9 +71,7 @@ import Footer from '../components/Footer.vue'
               </div>
 
               <div class="flex items-center gap-3">
-                <div
-                  class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800"
-                >
+                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800">
                   <iconify-icon icon="lucide:clock" class="text-2xl"></iconify-icon>
                 </div>
                 <div>
@@ -86,9 +85,7 @@ import Footer from '../components/Footer.vue'
               </div>
 
               <div class="flex items-center gap-3">
-                <div
-                  class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800"
-                >
+                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-800">
                   <iconify-icon icon="lucide:flask-conical" class="text-2xl"></iconify-icon>
                 </div>
                 <div>
@@ -104,18 +101,15 @@ import Footer from '../components/Footer.vue'
           </div>
 
           <div class="relative">
-            <img
-              src="https://images.unsplash.com/photo-1581093458791-9f3c3250bb8b?auto=format&fit=crop&q=80&w=1200"
-              class="rounded-[2.5rem] shadow-2xl aspect-video lg:aspect-square object-cover"
-              alt="Science Lab"
-            />
+            <img src="https://images.pexels.com/photos/8442819/pexels-photo-8442819.jpeg"
+              class="rounded-[2.5rem] shadow-2xl aspect-video lg:aspect-square object-cover" alt="Science Lab" />
           </div>
         </div>
       </section>
 
       <!-- Details Content -->
-      <section class="py-16 bg-slate-50 px-4">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
+      <section class="py-4 md:py-16 bg-slate-50 px-4 md:px-8">
+        <div class="container mx-auto grid lg:grid-cols-3 gap-12">
           <!-- Main Details -->
           <div class="lg:col-span-2 space-y-12">
             <div class="space-y-6">
@@ -174,37 +168,25 @@ import Footer from '../components/Footer.vue'
               </h2>
               <ul class="grid sm:grid-cols-2 gap-y-4 gap-x-8">
                 <li class="flex items-start gap-3">
-                  <iconify-icon
-                    icon="lucide:check-circle-2"
-                    class="text-blue-600 text-xl mt-0.5"
-                  ></iconify-icon>
+                  <iconify-icon icon="lucide:check-circle-2" class="text-blue-600 text-xl mt-0.5"></iconify-icon>
                   <span class="text-slate-700">
                     Mampu memecahkan masalah kompleks dengan metode komputasional.
                   </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <iconify-icon
-                    icon="lucide:check-circle-2"
-                    class="text-blue-600 text-xl mt-0.5"
-                  ></iconify-icon>
+                  <iconify-icon icon="lucide:check-circle-2" class="text-blue-600 text-xl mt-0.5"></iconify-icon>
                   <span class="text-slate-700">
                     Memiliki portofolio proyek teknologi yang siap untuk jenjang universitas.
                   </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <iconify-icon
-                    icon="lucide:check-circle-2"
-                    class="text-blue-600 text-xl mt-0.5"
-                  ></iconify-icon>
+                  <iconify-icon icon="lucide:check-circle-2" class="text-blue-600 text-xl mt-0.5"></iconify-icon>
                   <span class="text-slate-700">
                     Keahlian dalam analisis data dan interpretasi hasil riset laboratorium.
                   </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <iconify-icon
-                    icon="lucide:check-circle-2"
-                    class="text-blue-600 text-xl mt-0.5"
-                  ></iconify-icon>
+                  <iconify-icon icon="lucide:check-circle-2" class="text-blue-600 text-xl mt-0.5"></iconify-icon>
                   <span class="text-slate-700">
                     Kecakapan berkomunikasi dalam menyampaikan ide-ide teknis.
                   </span>
@@ -243,22 +225,16 @@ import Footer from '../components/Footer.vue'
                   </p>
                 </div>
 
-                <a
-                  href="https://p.superdesign.dev/draft/d4531f37-751d-49f4-a9b5-6b4d2c804a58"
-                  id="enroll-now-btn"
-                  class="block w-full text-center py-4 bg-blue-800 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-                >
+                <RouterLink to="/registration" id="enroll-now-btn"
+                  class="block w-full text-center py-4 bg-blue-800 text-white rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
                   Daftar di Program Ini
-                </a>
+                </RouterLink>
 
-                <a
-                  href="https://p.superdesign.dev/draft/58db06bd-7af7-4ec6-be12-8b005183b3e3"
-                  id="sidebar-campus-tour-btn"
-                  class="mt-4 block w-full text-center py-4 bg-white border-2 border-slate-100 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
-                >
+                <RouterLink to="/check-status" id="sidebar-campus-tour-btn"
+                  class="mt-4 block w-full text-center py-4 bg-white border-2 border-slate-100 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all items-center justify-center gap-2">
                   <iconify-icon icon="lucide:map" class="text-lg"></iconify-icon>
                   Lihat Tur Kampus
-                </a>
+                </RouterLink>
 
                 <p class="text-center text-xs text-slate-400 mt-4">
                   Kuota Tersisa: 12 Kursi
@@ -273,14 +249,11 @@ import Footer from '../components/Footer.vue'
                   Konsultasikan pilihan program pendidikan yang sesuai dengan bakat putra-putri
                   Anda.
                 </p>
-                <a
-                  href="#"
-                  id="chat-wa-link"
-                  class="flex items-center justify-center gap-2 py-3 border border-slate-700 rounded-xl font-semibold hover:bg-slate-800 transition-colors"
-                >
+                <RouterLink to="/contact" id="chat-wa-link"
+                  class="flex items-center justify-center gap-2 py-3 border border-slate-700 rounded-xl font-semibold hover:bg-slate-800 transition-colors">
                   <iconify-icon icon="lucide:message-circle" class="text-xl"></iconify-icon>
                   WhatsApp CS
-                </a>
+                </RouterLink>
               </div>
             </div>
           </div>
@@ -291,4 +264,3 @@ import Footer from '../components/Footer.vue'
     <Footer />
   </div>
 </template>
-

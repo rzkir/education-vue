@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Rizki Ramadhan",
+  "license": "MIT",
+  "homepage": "https://superdesign.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superdesign/education.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",

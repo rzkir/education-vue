@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { usePageMeta } from '../services/usePageMeta'
+
+usePageMeta({
+  title: 'E-Library - Nusantara Global Academy',
+  description:
+    'Akses E-Library Nusantara Global Academy untuk membaca buku digital, jurnal, dan materi pembelajaran pilihan kapan saja dan di mana saja.'
+})
 </script>
 
 <template>
     <div class="min-h-screen bg-slate-50 text-slate-900">
         <Header />
 
-        <main style="view-transition-name: main-content" class="pt-32 pb-24 px-4">
-            <div class="max-w-7xl mx-auto">
+        <main style="view-transition-name: main-content" class="pt-32 pb-24 px-4 md:px-8">
+            <div class="container mx-auto">
                 <!-- Breadcrumb & Title -->
                 <section class="mb-10">
                     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -138,7 +145,7 @@ import Footer from '../components/Footer.vue'
                                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                                 <div class="p-4 pb-0 flex items-center gap-3">
                                     <div
-                                        class="w-12 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white">
+                                        class="w-12 h-16 rounded-lg bg-linear-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white">
                                         <iconify-icon icon="lucide:book-open" class="text-xl"></iconify-icon>
                                     </div>
                                     <div class="text-xs text-slate-500 space-x-2">
@@ -193,7 +200,7 @@ import Footer from '../components/Footer.vue'
                                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                                 <div class="p-4 pb-0 flex items-center gap-3">
                                     <div
-                                        class="w-12 h-16 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white">
+                                        class="w-12 h-16 rounded-lg bg-linear-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white">
                                         <iconify-icon icon="lucide:book-open-check" class="text-xl"></iconify-icon>
                                     </div>
                                     <div class="text-xs text-slate-500 space-x-2">
@@ -247,15 +254,15 @@ import Footer from '../components/Footer.vue'
                                 class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                                 <div class="p-4 pb-0 flex items-center gap-3">
                                     <div
-                                        class="w-12 h-16 rounded-lg bg-gradient-to-br from-fuchsia-500 to-purple-600 flex items-center justify-center text-white">
+                                        class="w-12 h-16 rounded-lg bg-linear-to-br from-fuchsia-500 to-purple-600 flex items-center justify-center text-white">
                                         <iconify-icon icon="lucide:headphones" class="text-xl"></iconify-icon>
                                     </div>
-                                    <div class="text-xs text-slate-500 space-x-2">
-                                        <span class="inline-flex items-center gap-1">
+                                    <div class="text-sm text-slate-500 space-x-2">
+                                        <span class="inline-flex items-center gap-1 text-sm md:text-base">
                                             <iconify-icon icon="lucide:mic" class="text-[13px]"></iconify-icon>
                                             Audio Book
                                         </span>
-                                        <span class="inline-flex items-center gap-1">
+                                        <span class="inline-flex items-center gap-1 text-sm">
                                             <iconify-icon icon="lucide:users" class="text-[13px]"></iconify-icon>
                                             Semua usia
                                         </span>

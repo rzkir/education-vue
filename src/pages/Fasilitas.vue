@@ -2,6 +2,13 @@
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import { RouterLink } from 'vue-router'
+import { usePageMeta } from '../services/usePageMeta'
+
+usePageMeta({
+  title: 'Fasilitas Kampus - Nusantara Global Academy',
+  description:
+    'Jelajahi fasilitas modern Nusantara Global Academy melalui tur kampus virtual: ruang kelas digital, laboratorium sains, perpustakaan, sports center, dan kantin sehat.'
+})
 </script>
 
 <template>
@@ -10,8 +17,8 @@ import { RouterLink } from 'vue-router'
 
     <main style="view-transition-name: main-content">
       <!-- Hero Header Tur Kampus -->
-      <section class="pt-32 pb-16 px-4 bg-slate-50">
-        <div class="max-w-4xl mx-auto text-center">
+      <section class="pt-28 md:pt-32 pb-16 px-4 md:px-8 bg-slate-50">
+        <div class="container mx-auto text-center">
           <nav class="flex items-center justify-center gap-2 text-sm font-medium text-slate-500 mb-8"
             id="breadcrumb-nav">
             <RouterLink to="/" id="breadcrumb-home-link" class="hover:text-blue-800 transition-colors">
@@ -39,8 +46,8 @@ import { RouterLink } from 'vue-router'
       </section>
 
       <!-- Interactive Gallery Grid -->
-      <section class="py-20 px-4">
-        <div class="max-w-7xl mx-auto space-y-32">
+      <section class="py-4 md:py-20 px-4 md:px-8">
+        <div class="container mx-auto space-y-10 md:space-y-32">
           <!-- Row 1: Classrooms -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="order-2 lg:order-1 space-y-6">
@@ -72,24 +79,24 @@ import { RouterLink } from 'vue-router'
               </ul>
             </div>
 
-            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-[2rem] shadow-2xl">
+            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-4xl shadow-2xl">
               <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200"
                 class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Digital Classroom" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
             </div>
           </div>
 
           <!-- Row 2: Science Labs -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative group overflow-hidden rounded-[2rem] shadow-2xl">
+            <div class="relative group overflow-hidden rounded-4xl shadow-2xl">
               <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1200"
                 class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Science Lab" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
             </div>
 
@@ -154,24 +161,24 @@ import { RouterLink } from 'vue-router'
               </ul>
             </div>
 
-            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-[2rem] shadow-2xl">
+            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-4xl shadow-2xl">
               <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=1200"
                 class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Library" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
             </div>
           </div>
 
           <!-- Row 4: Sports Center -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative group overflow-hidden rounded-[2rem] shadow-2xl">
+            <div class="relative group overflow-hidden rounded-4xl shadow-2xl">
               <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200"
                 class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Sports Center" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
             </div>
 
@@ -234,12 +241,12 @@ import { RouterLink } from 'vue-router'
               </ul>
             </div>
 
-            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-[2rem] shadow-2xl">
+            <div class="order-1 lg:order-2 relative group overflow-hidden rounded-4xl shadow-2xl">
               <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&q=80&w=1200"
                 class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="Cafeteria" />
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
             </div>
           </div>
@@ -249,7 +256,7 @@ import { RouterLink } from 'vue-router'
       <!-- Final CTA Section -->
       <section class="py-24 bg-blue-900 text-white overflow-hidden relative">
         <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mt-20 -mr-20"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <div class="container mx-auto px-4 text-center relative z-10">
           <h2 class="text-3xl md:text-5xl font-bold mb-8">
             Siap Melihat Kampus Kami Secara Langsung?
           </h2>
@@ -258,7 +265,7 @@ import { RouterLink } from 'vue-router'
             pendaftaran untuk mengamankan kuota putra-putri Anda.
           </p>
           <div class="flex flex-wrap justify-center gap-6">
-            <RouterLink to="/pendaftaran" id="cta-register"
+            <RouterLink to="/registration" id="cta-register"
               class="px-10 py-4 bg-yellow-400 text-blue-900 rounded-xl font-bold text-lg hover:bg-yellow-300 hover:scale-105 transition-all shadow-xl shadow-yellow-400/20">
               Daftar PPDB Sekarang
             </RouterLink>

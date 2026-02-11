@@ -20,6 +20,10 @@ import AlumniNetwork from "./pages/Alumni-Network.vue"
 
 import Contact from "./pages/Contact.vue"
 
+import KebijakanPrivasi from "./pages/Kebijakan-Privasi.vue"
+
+import SyaratKetentuan from "./pages/Syarat-Ketentuan.vue"
+
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -73,6 +77,15 @@ export const router = createRouter({
       name: 'contact',
       component: Contact,
     },
+    {
+      path: '/kebijakan-privasi',
+      name: 'kebijakan-privasi',
+      component: KebijakanPrivasi,
+    },
+    {
+      path: '/syarat-ketentuan',
+      name: 'syarat-ketentuan',
+      component: SyaratKetentuan,
+    },
   ],
 })
-

@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { usePageMeta } from '../services/usePageMeta'
+
+usePageMeta({
+  title: 'Kontak - Nusantara Global Academy',
+  description:
+    'Hubungi Nusantara Global Academy untuk informasi pendaftaran, program akademik, atau kerja sama melalui formulir kontak dan kanal resmi yang tersedia.'
+})
 </script>
 
 <template>
     <div class="min-h-screen bg-slate-50 text-slate-900">
         <Header />
 
-        <main style="view-transition-name: main-content" class="pt-32 pb-24 px-4">
-            <div class="max-w-7xl mx-auto space-y-10">
+        <main style="view-transition-name: main-content" class="pt-32 pb-24 px-4 md:px-8">
+            <div class="container mx-auto space-y-10">
                 <!-- Page header -->
                 <section class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                     <div>

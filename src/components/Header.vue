@@ -18,7 +18,7 @@ const closeMobile = () => {
     <!-- Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-slate-100"
         style="view-transition-name: main-nav">
-        <nav class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <nav class="container mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <div class="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center">
                     <iconify-icon icon="lucide:graduation-cap" class="text-white text-2xl"></iconify-icon>

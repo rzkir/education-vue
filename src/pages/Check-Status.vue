@@ -3,15 +3,20 @@ import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
-import {
-    useStateRegistration,
-} from '../services/useStateRegistration'
+import { useStateRegistration } from '../services/useStateRegistration'
+import { usePageMeta } from '../services/usePageMeta'
 
 const registration = ref<RegistrationPayload | null>(null)
 const { loadFromLocalStorage } = useStateRegistration()
 
+usePageMeta({
+  title: 'Status Pendaftaran - Nusantara Global Academy',
+  description:
+    'Lihat status terbaru pendaftaran PPDB Anda di Nusantara Global Academy, termasuk verifikasi berkas dan tahapan seleksi berikutnya.'
+})
+
 onMounted(() => {
-    registration.value = loadFromLocalStorage()
+  registration.value = loadFromLocalStorage()
 })
 </script>
 
@@ -20,7 +25,7 @@ onMounted(() => {
         <Header />
 
         <main class="flex-1 pt-32 pb-20" style="view-transition-name: main-content">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto px-4 md:px-8">
                 <!-- Page Header -->
                 <div class="mb-10 text-center md:text-left">
                     <h1 class="text-3xl font-extrabold text-slate-900">
@@ -278,7 +283,7 @@ onMounted(() => {
                 </div>
 
                 <!-- Empty state -->
-                <div v-else class="max-w-xl mx-auto text-center mt-8">
+                <div v-else class="container mx-auto text-center mt-8">
                     <p class="text-slate-600 mb-6">
                         Untuk melihat status pendaftaran, silakan isi formulir
                         pendaftaran terlebih dahulu.

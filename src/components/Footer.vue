@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 <template>
   <!-- Footer -->
   <footer class="bg-white pt-10 md:pt-20 pb-10 border-t border-slate-100" style="view-transition-name: main-footer">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 md:px-8">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div class="col-span-1 md:col-span-2 lg:col-span-1">
           <div class="flex items-center gap-2 mb-6">
