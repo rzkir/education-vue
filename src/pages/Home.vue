@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -9,8 +10,8 @@ import Footer from '../components/Footer.vue'
 
     <main style="view-transition-name: main-content">
       <!-- Hero Section -->
-      <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section class="pb-16 md:pb-28 py-28 px-4 overflow-hidden">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-8">
             <div
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold">
@@ -34,14 +35,14 @@ import Footer from '../components/Footer.vue'
             </p>
 
             <div class="flex flex-wrap gap-4">
-              <a href="https://p.superdesign.dev/draft/d4531f37-751d-49f4-a9b5-6b4d2c804a58" id="hero-primary-cta"
+              <RouterLink to="/registration" id="hero-primary-cta"
                 class="px-8 py-4 bg-blue-800 text-white rounded-xl font-bold text-lg hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-xl shadow-blue-200">
                 Mulai Perjalanan Anda
-              </a>
-              <a href="https://p.superdesign.dev/draft/f1744e7f-8692-4491-af9f-64d699bd9a93" id="hero-secondary-cta"
+              </RouterLink>
+              <RouterLink to="/program" id="hero-secondary-cta"
                 class="px-8 py-4 bg-white border-2 border-slate-200 text-slate-700 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all">
                 Lihat Kurikulum
-              </a>
+              </RouterLink>
             </div>
 
             <div class="flex items-center gap-6 pt-4">
@@ -76,9 +77,84 @@ import Footer from '../components/Footer.vue'
         </div>
       </section>
 
+      <!-- About Section -->
+      <section id="tentang" class="bg-slate-50 px-4">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div>
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1000"
+                class="rounded-3xl shadow-lg" alt="Education" />
+            </div>
+
+            <div class="space-y-6">
+              <h2 class="text-blue-800 font-bold tracking-wider uppercase text-sm">
+                Tentang Kami
+              </h2>
+              <h3 class="text-4xl font-bold text-slate-900">
+                Visi Kami Untuk Masa Depan Pendidikan
+              </h3>
+              <p class="text-slate-600 text-lg">
+                Nusantara Global Academy didirikan dengan satu tujuan:
+                menciptakan lingkungan belajar yang inspiratif di mana
+                inovasi bertemu dengan tradisi. Kami percaya setiap siswa
+                memiliki bakat unik yang harus dikembangkan melalui
+                bimbingan yang tepat.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10 md:mt-16">
+            <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                <iconify-icon icon="lucide:award" class="text-2xl text-blue-700"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">
+                  Kualitas Akademik Tinggi
+                </h4>
+                <p class="text-sm text-slate-500">
+                  Kurikulum berstandar internasional yang disesuaikan
+                  dengan kearifan lokal.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                <iconify-icon icon="lucide:users" class="text-2xl text-blue-700"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">
+                  Pembinaan Karakter
+                </h4>
+                <p class="text-sm text-slate-500">
+                  Menanamkan integritas, empati, dan keberanian pada
+                  setiap individu.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                <iconify-icon icon="lucide:lightbulb" class="text-2xl text-blue-700"></iconify-icon>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900">
+                  Inovasi Kreatif
+                </h4>
+                <p class="text-sm text-slate-500">
+                  Mendorong eksplorasi tanpa batas di bidang seni,
+                  sains, dan teknologi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- PPDB Banner Section -->
-      <section id="ppdb" class="py-12 md:py-16 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
+      <section id="ppdb" class="pt-10 md:pt-24 px-4 bg-white">
+        <div class="container mx-auto">
           <div
             class="relative overflow-hidden bg-linear-to-br from-indigo-700 via-blue-800 to-purple-800 rounded-[2.5rem] p-8 md:p-16 shadow-2xl">
             <!-- Decorative Elements -->
@@ -118,11 +194,10 @@ import Footer from '../components/Footer.vue'
                     </div>
                   </div>
 
-                  <a href="https://p.superdesign.dev/draft/d4531f37-751d-49f4-a9b5-6b4d2c804a58"
-                    id="ppdb-banner-cta-btn"
+                  <RouterLink to="/pendaftaran" id="ppdb-banner-cta-btn"
                     class="px-8 py-4 bg-yellow-400 text-blue-900 rounded-xl font-bold text-lg hover:bg-yellow-300 hover:scale-105 transition-all shadow-xl shadow-yellow-400/20">
                     Daftar Sekarang
-                  </a>
+                  </RouterLink>
                 </div>
               </div>
 
@@ -160,84 +235,10 @@ import Footer from '../components/Footer.vue'
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="tentang" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="order-2 lg:order-1">
-              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1000"
-                class="rounded-3xl shadow-lg" alt="Education" />
-            </div>
-            <div class="order-1 lg:order-2 space-y-6">
-              <h2 class="text-blue-800 font-bold tracking-wider uppercase text-sm">
-                Tentang Kami
-              </h2>
-              <h3 class="text-4xl font-bold text-slate-900">
-                Visi Kami Untuk Masa Depan Pendidikan
-              </h3>
-              <p class="text-slate-600 text-lg">
-                Nusantara Global Academy didirikan dengan satu tujuan:
-                menciptakan lingkungan belajar yang inspiratif di mana
-                inovasi bertemu dengan tradisi. Kami percaya setiap siswa
-                memiliki bakat unik yang harus dikembangkan melalui
-                bimbingan yang tepat.
-              </p>
-
-              <div class="grid gap-6 mt-8">
-                <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
-                  <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <iconify-icon icon="lucide:award" class="text-2xl text-blue-700"></iconify-icon>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-slate-900">
-                      Kualitas Akademik Tinggi
-                    </h4>
-                    <p class="text-sm text-slate-500">
-                      Kurikulum berstandar internasional yang disesuaikan
-                      dengan kearifan lokal.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
-                  <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <iconify-icon icon="lucide:users" class="text-2xl text-blue-700"></iconify-icon>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-slate-900">
-                      Pembinaan Karakter
-                    </h4>
-                    <p class="text-sm text-slate-500">
-                      Menanamkan integritas, empati, dan keberanian pada
-                      setiap individu.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
-                  <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <iconify-icon icon="lucide:lightbulb" class="text-2xl text-blue-700"></iconify-icon>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-slate-900">
-                      Inovasi Kreatif
-                    </h4>
-                    <p class="text-sm text-slate-500">
-                      Mendorong eksplorasi tanpa batas di bidang seni,
-                      sains, dan teknologi.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Programs Section -->
-      <section id="program" class="py-24 px-4">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center max-w-2xl mx-auto mb-16">
+      <section id="program" class="py-16 md:py-24 px-4">
+        <div class="container mx-auto">
+          <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
             <h2 class="text-blue-800 font-bold tracking-wider uppercase text-sm mb-4">
               Program Unggulan
             </h2>
@@ -258,12 +259,12 @@ import Footer from '../components/Footer.vue'
                 Fokus pada pengembangan logika, pemrograman dasar, dan
                 eksplorasi ilmiah melalui praktikum intensif.
               </p>
-              <a href="https://p.superdesign.dev/draft/f1744e7f-8692-4491-af9f-64d699bd9a93" id="program-science-link"
+              <RouterLink to="/program" id="program-science-link"
                 class="mt-6 inline-flex items-center text-blue-700 font-semibold group">
                 Selengkapnya
                 <iconify-icon icon="lucide:arrow-right"
                   class="ml-2 group-hover:translate-x-2 transition-transform"></iconify-icon>
-              </a>
+              </RouterLink>
             </div>
 
             <div
@@ -277,12 +278,12 @@ import Footer from '../components/Footer.vue'
                 Mengasah kreativitas melalui musik, tari, seni rupa, dan
                 apresiasi budaya nusantara yang mendalam.
               </p>
-              <a href="https://p.superdesign.dev/draft/f1744e7f-8692-4491-af9b-64d699bd9a93" id="program-art-link"
+              <RouterLink to="/program" id="program-art-link"
                 class="mt-6 inline-flex items-center text-blue-700 font-semibold group">
                 Selengkapnya
                 <iconify-icon icon="lucide:arrow-right"
                   class="ml-2 group-hover:translate-x-2 transition-transform"></iconify-icon>
-              </a>
+              </RouterLink>
             </div>
 
             <div
@@ -296,20 +297,20 @@ import Footer from '../components/Footer.vue'
                 Membangun sportivitas dan kesehatan melalui berbagai
                 cabang olahraga populer dan bela diri.
               </p>
-              <a href="https://p.superdesign.dev/draft/f1744e7f-8692-4491-af9f-64d699bd9a93" id="program-sport-link"
+              <RouterLink to="/program" id="program-sport-link"
                 class="mt-6 inline-flex items-center text-blue-700 font-semibold group">
                 Selengkapnya
                 <iconify-icon icon="lucide:arrow-right"
                   class="ml-2 group-hover:translate-x-2 transition-transform"></iconify-icon>
-              </a>
+              </RouterLink>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Facilities Section -->
-      <section id="fasilitas" class="py-24 bg-slate-900 text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4">
+      <section id="fasilitas" class="py-16 md:py-24 bg-slate-900 text-white overflow-hidden px-4">
+        <div class="container mx-auto">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div class="max-w-xl">
               <h2 class="text-blue-400 font-bold tracking-wider uppercase text-sm mb-4">
@@ -319,10 +320,10 @@ import Footer from '../components/Footer.vue'
                 Lingkungan Belajar yang Modern &amp; Nyaman
               </h3>
             </div>
-            <a href="/fasilitas" id="all-facilities-link"
+            <RouterLink to="/fasilitas" id="all-facilities-link"
               class="text-blue-400 font-semibold border-b border-blue-400 pb-1 hover:text-white hover:border-white transition-colors">
               Lihat Semua Fasilitas
-            </a>
+            </RouterLink>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -393,4 +394,3 @@ import Footer from '../components/Footer.vue'
     <Footer />
   </div>
 </template>
-

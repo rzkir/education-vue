@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -13,9 +14,9 @@ import Footer from '../components/Footer.vue'
         <div class="max-w-4xl mx-auto text-center">
           <nav class="flex items-center justify-center gap-2 text-sm font-medium text-slate-500 mb-8"
             id="breadcrumb-nav">
-            <a href="/" id="breadcrumb-home-link" class="hover:text-blue-800 transition-colors">
+            <RouterLink to="/" id="breadcrumb-home-link" class="hover:text-blue-800 transition-colors">
               Beranda
-            </a>
+            </RouterLink>
             <iconify-icon icon="lucide:chevron-right" class="text-xs"></iconify-icon>
             <span class="text-blue-800">Tur Kampus</span>
           </nav>
@@ -257,14 +258,14 @@ import Footer from '../components/Footer.vue'
             pendaftaran untuk mengamankan kuota putra-putri Anda.
           </p>
           <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://p.superdesign.dev/draft/d4531f37-751d-49f4-a9b5-6b4d2c804a58" id="cta-register"
+            <RouterLink to="/pendaftaran" id="cta-register"
               class="px-10 py-4 bg-yellow-400 text-blue-900 rounded-xl font-bold text-lg hover:bg-yellow-300 hover:scale-105 transition-all shadow-xl shadow-yellow-400/20">
               Daftar PPDB Sekarang
-            </a>
-            <a href="/#kontak" id="cta-contact"
+            </RouterLink>
+            <RouterLink to="/contact" id="cta-contact"
               class="px-10 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-blue-900 transition-all">
               Hubungi Kami
-            </a>
+            </RouterLink>
           </div>
         </div>
       </section>
